@@ -15,13 +15,22 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* NextJS 사용을 위한 설정 추가 */
+    "plugins": [{"name": "next"}],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
   },
-  "include": ["src"]
+  /* NextJS 사용을 위한 설정 추가 */
+  "include": ["src", "./dist/types/**/*.d.ts", "./next-env.d.ts"],
+  "exclude": ["node_modules"]
 }
